@@ -9,8 +9,10 @@
 
     function onReady(smart)  {
       console.log(smart, 'hello');
-      var user = smart.user.read();
-      console.log(user);
+      smart.user.read().then(function(user){
+        console.log(user);
+      });
+      
       // if (smart.hasOwnProperty('patient')) {
       //   var patient = smart.patient;
       //   var pt = patient.read();
